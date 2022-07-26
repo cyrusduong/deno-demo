@@ -23,7 +23,7 @@ If you find any of this interesting please check his talk out [here](https://you
 
 <!-- _footer: bundling not meant for web ATM, recommends ESBuild for shipping browser JS -->
 
-[Install](#install) as a single executable/binary and out-of-box Deno provides
+[Install](https://deno.land/#installation) as a single executable/binary and out-of-box Deno provides
 
 - Fast for DX (it was until bun showed up)
 - config-less (test, lint, fmt)
