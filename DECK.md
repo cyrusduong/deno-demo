@@ -8,6 +8,15 @@ Since we already talked about [bun](https://bun.sh/), the *other, newer* TS/JS r
 
 ![w:200](https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg)
 
+
+---
+
+# Preface and Credit
+
+A *lot* of this was just put together based on the Deno manual, and Ryan Dahl's talk @ Remix Conf 2022.
+
+If you find any of this interesting please check his talk out [here](https://youtu.be/3NR9Spj0DmQ)
+
 ---
 
 # A Great DX (developer experience)  
@@ -75,6 +84,8 @@ deno run serve.ts
 deno run https://deno.land/std/examples/welcome.ts
 ```
 
+What about a WebSocket chat server and simple client?
+
 ```sh
 deno run https://deno.land/std@0.149.0/examples/chat/server.ts
 ```
@@ -117,7 +128,7 @@ deno test benchmarks/deno.ts
 
 ---
 
-# Bundle for use, bundle as lib
+# Bundle as app *and* lib
 
 ```sh
 deno bundle monorepo/index.ts app.ts
@@ -130,18 +141,18 @@ deno bundle monorepo/index.ts app.ts
 Testing is fast (I think...)
 
 ```
-hyperfine -N -w=3 'deno test benchmarks/deno.ts' 'bun wiptest bun.test.ts' 'npx jest node.test.js' 
+deno task benchmark
 ```
 
 ---
 
-# Now the *really* cool demo
+# Now the *really* cool demo (Deno Deploy)
 
 * Lets make our own [blog](https://deno.land/x/blog@0.3.3)
-* " deploy on the web [Deno Deploy](https://deno.com/deploy)
-* " at the edge in [32 regions](https://deno.com/deploy/docs/regions)
+* That's SSR, no client-JS
+* Using markdown for "pages"
+* Deployed on the web [Deno Deploy](https://deno.com/deploy)
+* At the edge in [32 regions](https://deno.com/deploy/docs/regions)
+* No to/little build-time to "prod"
 
 <!-- This shouldn't take long... -->
-
-*[And GA is on the way](https://deno.com/blog/deploy-beta4)*
-
