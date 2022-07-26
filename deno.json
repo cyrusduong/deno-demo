@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "serve": "deno run -A",
-    "benchmark": "echo benchmarks!"
+    "dev": "deno run -A serve.ts",
+    "benchmark": "hyperfine -N -w=3 'deno test benchmarks/deno.ts' 'bun wiptest bun.test.ts' 'npx jest node.test.js'"
   }
 }
