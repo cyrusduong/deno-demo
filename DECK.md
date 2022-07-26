@@ -25,12 +25,11 @@ If you find any of this interesting please check his talk out [here](https://you
 
 [Install](#install) as a single executable/binary and out-of-box Deno provides
 
-- Fast* (it was until bun showed up)
+- Fast for DX (it was until bun showed up)
 - config-less (test, lint, fmt)
 - Secure
 - ES Module loading via URLs (no package manager required)
-- Bundling* "apps"
-- Top-level async/await
+- Bundling*/Installing "apps"
 - Go to reference (web modules)
 
 --- 
@@ -40,22 +39,6 @@ If you find any of this interesting please check his talk out [here](https://you
 Manual: https://deno.land/manual/
 Stable: https://doc.deno.land/deno/stable
 Unstable: https://doc.deno.land/deno/unstable
-
----
-
-# Install
-
-## macOS / Linux / WSL 
-
-`curl -fsSL https://deno.land/x/install/install.sh | sh`
-
-## Using PowerShell (Windows):
-
-`iwr https://deno.land/x/install/install.ps1 -useb | iex`
-
-Or other various package managers like Scoop, Homebrew, Chocolatey, Nix, Cargo.
-
-Or download binaries [directly](https://github.com/denoland/deno/releases) - less than 35MB.
 
 ---
 
@@ -94,18 +77,21 @@ deno run https://deno.land/std@0.149.0/examples/chat/server.ts
 
 # Installable "apps"!
 
-```sh
-deno install --allow-net fetch.ts
-```
-🤔 Can we install `deno` using our own `fetch` implementation?
 
-
+What was my public ip again?
 ```
 deno install --allow-net myip.ts
 ```
-What was my public ip again?
 
+```sh
+deno install --allow-net fetch.ts
+```
 
+🤔 Can we install `deno` using our own `fetch` implementation?
+
+```
+fetch https://deno.land/x/install/install.sh | sh
+```
 
 ---
 
@@ -124,14 +110,6 @@ Linting and Testing whenever & wherever
 ```sh
 deno lint unformatted.ts
 deno test benchmarks/deno.ts
-```
-
----
-
-# Bundle as app *and* lib
-
-```sh
-deno bundle monorepo/index.ts app.ts
 ```
 
 ---
