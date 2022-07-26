@@ -124,7 +124,7 @@ deno task benchmark
 
 ---
 
-# Now the *really* cool demo (Deno Deploy)
+# Now the *really* cool demo (Deno + Deploy)
 
 * Lets make our own [blog](https://deno.land/x/blog@0.3.3)
 * That's SSR, no client-JS
