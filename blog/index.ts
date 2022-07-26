@@ -4,7 +4,7 @@ blog({
   author: "Cyrus Duong",
   title: "My Blog",
   description: "Here is where I demo deno with blog module",
-  avatar: "me.jpg",
+  avatar: "./me.jpg",
   avatarClass: "rounded-full",
   links: [
     { title: "Email", url: "mailto:cyrusduong@gmail.com" },
